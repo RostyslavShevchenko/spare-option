@@ -45,7 +45,7 @@ a {
     padding: 40px 0;
 }
 
-.container {
+.our-yachts .container {
     max-width: 375px;
     padding: 0 20px;
     margin: 0 auto;
@@ -69,14 +69,18 @@ a {
 .yacht-card-list {}
 
 .yacht-card {
-    padding: 24px;
+    padding: 16px;
     background: #fbfbfb;
     border-radius: 15px;
 }
 
+.yacht-card:nth-child(2),
+.yacht-card:nth-child(3){
+    display: none;
+}
+
 .our-yachts-img {
     border-radius: 24px;
-    width: 302px;
 }
 
 .yacht-info {
@@ -162,7 +166,6 @@ a {
     border: 1px solid rgba(251, 251, 251, 0.35);
     border-radius: 15px;
     padding: 14px 32px;
-    width: auto;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -172,8 +175,91 @@ a {
 }
 
 .our-yachts-btn:hover,
-.our-yachts-btn:active,
+.our-yachts-btn:active
 .our-yachts-btn:focus {
     color:#1b414b;
     background-color: #fbfbfb;
+    outline: none;
+}
+
+@media  screen and (min-width: 768px) {
+    .our-yachts {
+        padding: 75px 0;
+    }
+
+    .our-yachts .container {
+        max-width: 768px;
+        padding: 0 32px;
+        gap: 0;
+    }
+
+    .our-yachts-title {
+        margin-bottom: 75px;
+        font-size: 48px;
+        line-height: 100%;
+        text-align: center;
+        width: 645px;
+    }
+
+    .yacht-card-list {
+        margin-bottom: 50px;
+        display: flex;
+        gap: 32px;
+    }
+
+    .yacht-card {
+        width: calc((100% - 32px) / 2);
+    }
+    
+    .yacht-card:nth-child(2){
+    display: block;
+}
+
+.text-overflow {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 147px;
+    text-overflow: ellipsis;
+}
+
+.our-yachts-btn {
+    padding: 16px 40px;
+    font-size: 18px;
+    line-height: 110%;
+}
+
+}
+
+@media screen and (min-width:1280px) {
+    .our-yachts .container {
+        max-width: 1280px;
+        padding: 0 50px;
+    }
+
+    .yacht-card:nth-child(3) {
+        display: block;
+    }
+
+    .yacht-card-list {
+        gap: 25px;
+    }
+
+    .yacht-card {
+        width: calc((100% - 50px) / 3);
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .our-yachts .container {
+        max-width: 1440px;
+        padding: 0 100px;
+    }
+
+    .yacht-card-list {
+        gap: 32px;
+    }
+
+    .yacht-card {
+        width: calc((100% - 64px) / 3);
+    }
 }
